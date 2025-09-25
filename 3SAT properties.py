@@ -1,15 +1,13 @@
-##Solving 2.1##
 #%%
+
+###Performance of Simulated Annealing algorithm###
+
 import matplotlib.pyplot as plt
 import SimAnn
 import KSAT
 
 #(To make this function work the return statement inside the beta 
 #loop in SimAnn must be commented)
-
-##For this part I made a change to SimAnn:
-#There is now an array to keep track of acceptance rates for each beta
-
 
 #Function to plot acceptance rates
 
@@ -35,7 +33,6 @@ def display(mcmc_steps,anneal_steps,
 display(400, 20, 1, 10)
 
 #%%
-##Solving 2.2##
 
 #Plotting acceprance rate for different M
 
@@ -96,7 +93,8 @@ def solving_probability(totinst, seed = 123,):
 solving_probability(30)
 
 #%%
-##Solving 3.11##
+
+###General 3-SAT Properties###
 
 #Given the scope of this task, I made another change to SimAnn 
 # to make the code go faster:
@@ -161,9 +159,8 @@ solving_probability(30)
 
 
 #%%
-##Solving 3.12##
 
-#Identifying the so-called algorithmic threshold M(Alg)(N = 200)
+#Identifying the algorithmic threshold M(Alg)(N = 200)
 #Using the binary search algorithm
 #We'll use the same parameters mcmc, anneal_steps, beta0, beta1, seed
 #for each M because the threshold changes on different parameters
@@ -237,5 +234,6 @@ M_values, probs, threshold = find_threshold_detailed(
 )
 
 print(f"Estimated threshold M(Alg) ≈ {threshold}")
+
 
 # %%
